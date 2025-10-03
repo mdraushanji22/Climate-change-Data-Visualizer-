@@ -1,0 +1,214 @@
+/* SeaLevel.css - Styles for the Sea Level component */
+
+.sea-level-container {
+  padding: var(--space-lg);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .sea-level-container {
+    padding: var(--space-xl);
+  }
+}
+
+.component-header {
+  text-align: center;
+  margin-bottom: var(--space-xxl);
+}
+
+.component-header h2 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: var(--space-md);
+}
+
+.component-header p {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.chart-card {
+  background-color: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.chart-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: var(--space-md);
+}
+
+.chart-card p {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-md);
+}
+
+.chart-wrapper {
+  height: 384px;
+  position: relative;
+}
+
+.factors-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xxl);
+}
+
+@media (min-width: 768px) {
+  .factors-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.factors-card, .impacts-card {
+  background-color: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-lg);
+}
+
+.factors-card h3, .impacts-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: var(--space-md);
+}
+
+.factor-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: var(--space-md);
+}
+
+.factor-item:last-child {
+  margin-bottom: 0;
+}
+
+.factor-indicator {
+  flex-shrink: 0;
+  margin-top: var(--space-xs);
+}
+
+.factor-indicator-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.factor-indicator-dot.blue {
+  background-color: var(--primary);
+}
+
+.factor-indicator-dot.green {
+  background-color: var(--secondary);
+}
+
+.factor-indicator-dot.yellow {
+  background-color: var(--warning);
+}
+
+.factor-indicator-dot.red {
+  background-color: var(--accent);
+}
+
+.factor-content {
+  margin-left: var(--space-sm);
+}
+
+.factor-content h4 {
+  font-weight: 700;
+  margin-bottom: var(--space-xs);
+}
+
+.factor-content p {
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.progress-section {
+  margin-top: var(--space-lg);
+}
+
+.progress-section p {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-md);
+}
+
+.progress-item {
+  margin-bottom: var(--space-md);
+}
+
+.progress-item:last-child {
+  margin-bottom: 0;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--space-xs);
+  font-weight: 500;
+}
+
+.progress-bar-container {
+  width: 100%;
+  background-color: var(--border);
+  border-radius: var(--radius-full);
+  height: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width var(--transition-medium) ease;
+}
+
+.progress-bar.green {
+  background: linear-gradient(90deg, var(--secondary), #15803d);
+}
+
+.progress-bar.blue {
+  background: linear-gradient(90deg, var(--primary), #1d4ed8);
+}
+
+.progress-bar.yellow {
+  background: linear-gradient(90deg, var(--warning), #d97706);
+}
+
+.progress-bar.red {
+  background: linear-gradient(90deg, var(--accent), #b91c1c);
+}
+
+.projection-box {
+  margin-top: var(--space-lg);
+  padding: var(--space-md);
+  background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+  border-radius: var(--radius-md);
+}
+
+.projection-box h4 {
+  font-weight: 700;
+  color: var(--secondary);
+  margin-bottom: var(--space-sm);
+}
+
+.projection-box p {
+  color: var(--text-primary);
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .chart-wrapper {
+    height: 300px;
+  }
+}

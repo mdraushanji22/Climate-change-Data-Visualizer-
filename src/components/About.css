@@ -1,0 +1,185 @@
+/* About.css - Styles for the About component */
+
+.about-container {
+  padding: var(--space-lg);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .about-container {
+    padding: var(--space-xl);
+  }
+}
+
+.component-header {
+  text-align: center;
+  margin-bottom: var(--space-xxl);
+}
+
+.component-header h2 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: var(--space-md);
+}
+
+.component-header p {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.mission-card {
+  background-color: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.mission-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: var(--space-md);
+}
+
+.mission-card p {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-md);
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xxl);
+}
+
+@media (min-width: 768px) {
+  .info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.sources-card, .usage-card {
+  background-color: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-lg);
+}
+
+.sources-card h3, .usage-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: var(--space-md);
+}
+
+.sources-list, .usage-list {
+  list-style: none;
+  padding: 0;
+}
+
+.sources-list li, .usage-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: var(--space-md);
+}
+
+.sources-list li:last-child, .usage-list li:last-child {
+  margin-bottom: 0;
+}
+
+.source-indicator, .usage-indicator {
+  flex-shrink: 0;
+  margin-top: var(--space-xs);
+}
+
+.indicator-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.indicator-dot.blue {
+  background-color: var(--primary);
+}
+
+.indicator-dot.green {
+  background-color: var(--secondary);
+}
+
+.indicator-dot.yellow {
+  background-color: var(--warning);
+}
+
+.indicator-dot.red {
+  background-color: var(--accent);
+}
+
+.source-content, .usage-content {
+  margin-left: var(--space-sm);
+  color: var(--text-secondary);
+}
+
+.source-content span, .usage-content span {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.usage-list {
+  padding-left: var(--space-md);
+  list-style-type: decimal;
+}
+
+.science-card {
+  background-color: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-lg);
+}
+
+.science-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: var(--space-md);
+}
+
+.science-card p {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-md);
+}
+
+.science-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+@media (min-width: 768px) {
+  .science-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.science-item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+}
+
+.science-item h4 {
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+  font-size: 1.125rem;
+}
+
+.science-item p {
+  color: var(--text-secondary);
+  margin: 0;
+  font-size: 0.875rem;
+}

@@ -1,0 +1,47 @@
+{
+  "name": "climate-change-visualizer",
+  "description": "A data visualization tool for climate change metrics including temperature, emissions, and sea level rise",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "keywords": [
+    "climate-change",
+    "data-visualization",
+    "react",
+    "css",
+    "environment",
+    "global-warming"
+  ],
+  "author": "Climate Data Visualization Team",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@headlessui/react": "^2.2.9",
+    "@heroicons/react": "^2.2.0",
+    "chart.js": "^4.5.0",
+    "leaflet": "^1.9.4",
+    "react": "^19.1.1",
+    "react-chartjs-2": "^5.3.0",
+    "react-dom": "^19.1.1",
+    "react-leaflet": "^5.0.0",
+    "react-router-dom": "^7.9.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.36.0",
+    "@types/react": "^19.1.16",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.4",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.36.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.22",
+    "globals": "^16.4.0",
+    "postcss": "^8.5.6",
+    "vite": "^7.1.7"
+  }
+}

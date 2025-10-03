@@ -1,0 +1,201 @@
+/* components.css - Shared styles for all components */
+
+.section-container {
+  padding: var(--space-lg);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .section-container {
+    padding: var(--space-xl);
+  }
+}
+
+.component-header {
+  text-align: center;
+  margin-bottom: var(--space-xxl);
+  animation: fadeIn 0.8s ease-out;
+}
+
+.component-header h2 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: var(--space-md);
+  position: relative;
+  display: inline-block;
+}
+
+.component-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  border-radius: 2px;
+}
+
+.component-header p {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.feature-grid {
+  display: grid;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xxl);
+}
+
+@media (min-width: 768px) {
+  .feature-grid.cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .feature-grid.cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .feature-grid.cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .feature-grid.cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.feature-card {
+  background-color: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-lg);
+  transition: all var(--transition-medium);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  opacity: 0;
+  transition: opacity var(--transition-medium);
+}
+
+.feature-card:hover::before {
+  opacity: 1;
+}
+
+.feature-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: var(--space-md);
+}
+
+.feature-card p {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-md);
+}
+
+.feature-card .feature-value {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: var(--space-sm) 0;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.visualization-container {
+  background-color: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-lg);
+  margin-bottom: var(--space-xxl);
+  transition: all var(--transition-medium);
+}
+
+.visualization-container:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.visualization-container h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: var(--space-lg);
+}
+
+.chart-wrapper {
+  height: 350px;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .chart-wrapper {
+    height: 300px;
+  }
+}
+
+.info-box {
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  margin-top: var(--space-xl);
+  border-left: 4px solid var(--primary);
+}
+
+.info-box h4 {
+  color: var(--primary);
+  margin-bottom: var(--space-md);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.info-box ul {
+  padding-left: 1.5rem;
+}
+
+.info-box li {
+  margin-bottom: var(--space-sm);
+  color: var(--text-primary);
+}
+
+.callout-card {
+  background: linear-gradient(135deg, var(--surface) 0%, #f1f5f9 100%);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  border-top: 4px solid var(--primary);
+}
+
+.callout-card h3 {
+  color: var(--primary);
+  margin-bottom: var(--space-md);
+}
+
+.callout-card p {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-md);
+}

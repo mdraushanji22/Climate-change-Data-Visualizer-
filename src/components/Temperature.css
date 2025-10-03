@@ -1,0 +1,261 @@
+/* Temperature.css - Styles for the Temperature component */
+
+.temperature-container {
+  padding: var(--space-lg);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .temperature-container {
+    padding: var(--space-xl);
+  }
+}
+
+.component-header {
+  text-align: center;
+  margin-bottom: var(--space-xxl);
+  animation: fadeIn 0.8s ease-out;
+}
+
+.component-header h2 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: var(--space-md);
+  position: relative;
+  display: inline-block;
+}
+
+.component-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  border-radius: 2px;
+}
+
+.component-header p {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.chart-card {
+  background-color: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-lg);
+  margin-bottom: var(--space-xl);
+  transition: all var(--transition-medium);
+}
+
+.chart-card:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.chart-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+@media (min-width: 768px) {
+  .chart-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.chart-header h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* Enhanced Button Styles */
+.time-range-buttons {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.modern-button {
+  /* Rounded corners */
+  border-radius: var(--radius-full);
+  
+  /* Gradient background */
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  
+  /* Bold, centered text */
+  font-weight: 600;
+  text-align: center;
+  color: white;
+  
+  /* Padding and sizing */
+  padding: var(--space-sm) var(--space-lg);
+  min-width: 100px;
+  
+  /* Subtle shadow */
+  box-shadow: var(--shadow-sm);
+  
+  /* Smooth transitions */
+  transition: all var(--transition-medium);
+  border: none;
+  cursor: pointer;
+  
+  /* Ensure text is easy to read */
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.modern-button:hover {
+  /* Scale up slightly */
+  transform: scale(1.05);
+  
+  /* Change color */
+  background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+  
+  /* Glowing effect */
+  box-shadow: 0 0 15px rgba(30, 64, 175, 0.4), var(--shadow-md);
+  
+  /* Maintain readability */
+  color: white;
+}
+
+.modern-button:active {
+  transform: scale(0.98);
+  box-shadow: var(--shadow-sm);
+}
+
+.modern-button.active {
+  /* Active state with different gradient */
+  background: linear-gradient(135deg, var(--secondary) 0%, #15803d 100%);
+  
+  /* Enhanced glow for active state */
+  box-shadow: 0 0 20px rgba(22, 163, 74, 0.5), var(--shadow-md);
+}
+
+.modern-button:focus {
+  outline: 2px solid var(--primary-light);
+  outline-offset: 2px;
+}
+
+.chart-wrapper {
+  height: 384px;
+  position: relative;
+}
+
+.info-card {
+  background-color: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-lg);
+  margin-bottom: var(--space-lg);
+  transition: all var(--transition-medium);
+}
+
+.info-card:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.info-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: var(--space-md);
+}
+
+.info-card p {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-md);
+}
+
+.fact-box {
+  margin-top: var(--space-md);
+  padding: var(--space-md);
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+  border-radius: var(--radius-md);
+}
+
+.fact-box h4 {
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: var(--space-sm);
+}
+
+.fact-box ul {
+  padding-left: 1.5rem;
+}
+
+.fact-box li {
+  margin-bottom: var(--space-xs);
+  color: var(--text-primary);
+}
+
+.progress-section h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: var(--space-md);
+}
+
+.progress-item {
+  margin-bottom: var(--space-md);
+}
+
+.progress-item:last-child {
+  margin-bottom: 0;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--space-xs);
+  font-weight: 500;
+}
+
+.progress-bar-container {
+  width: 100%;
+  background-color: var(--border);
+  border-radius: var(--radius-full);
+  height: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width var(--transition-medium) ease;
+}
+
+.progress-bar.arctic {
+  background: linear-gradient(90deg, #dc2626, #ea580c);
+}
+
+.progress-bar.northern {
+  background: linear-gradient(90deg, #f59e0b, #ca8a04);
+}
+
+.progress-bar.southern {
+  background: linear-gradient(90deg, #16a34a, #15803d);
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .chart-wrapper {
+    height: 300px;
+  }
+  
+  .modern-button {
+    flex: 1;
+    min-width: auto;
+  }
+}
