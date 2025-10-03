@@ -72,6 +72,8 @@ To preview the production build locally:
 ```bash
 npm run preview
 ```
+![Uploading Screenshot 2025-10-03 210144.png…]()
+
 
 ## Project Structure
 
