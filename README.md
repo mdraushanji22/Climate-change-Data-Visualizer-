@@ -54,6 +54,8 @@ To start the development server:
 ```bash
 npm run dev
 ```
+<img width="1898" height="898" alt="Screenshot 2025-10-03 210144" src="https://github.com/user-attachments/assets/f11bc201-b074-4023-9112-6c7f7bd50cfc" />
+
 
 The application will be available at `http://localhost:5173` (or the next available port).
 
@@ -72,7 +74,7 @@ To preview the production build locally:
 ```bash
 npm run preview
 ```
-![Uploading Screenshot 2025-10-03 210144.png…]()
+
 
 
 
